@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Taxi Driver
 
 This program can be launched in 2 differents modes:
@@ -8,6 +7,3 @@ This program can be launched in 2 differents modes:
 # Launch the web app
 
 See docs/webapp.md
-=======
-# IA_DeepQLearning
->>>>>>> 15dcbc8 (Initial commit)
