@@ -1,0 +1,83 @@
+{
+  "app": {
+    "name": "TaxiDriver",
+    "description": "Template Nuxt pour commencer un projet web rapidement"
+  },
+
+  "views": {
+    "home": "Accueil",
+    "login": "Connexion",
+    "register": "Inscription"
+  },
+
+  "auth": {
+    "login": "Connexion",
+    "register": "Inscription",
+    "profile": "Profil",
+    "logout": "Déconnexion"
+  },
+
+  "toolbar": {
+    "menu": "Menu"
+  },
+
+  "errors": {
+    "global": "Oops.. something went wrong"
+  },
+
+  "dialog": {
+    "close": "Fermer",
+    "cancel": "Annuler",
+    "send": "Envoyer",
+    "refresh": "Rafraichîr"
+  },
+
+  "forms": {
+    "search": "Chercher.."
+  },
+
+  "contents": {
+    "title": "Documentation",
+    "read": "En lire plus"
+  },
+
+  "index": {
+    "loading": "Chargement...",
+    "completed": "Complet."
+  },
+
+  "home": {
+    "title": "Accueil"
+  },
+
+  "login": {
+    "title": "Connexion",
+    "email": "Adresse email..",
+    "password": "Mot de passe..",
+    "google": "Connexion Google",
+    "no-account": "Pas de compte ? Créez en un !",
+    "no-account-short": "Pas de compte ?",
+    "connected": "Vous êtes désormais connecté"
+  },
+
+  "register": {
+    "title": "Inscription",
+    "email": "Adresse email..",
+    "username": "Nom d'utilisateur..",
+    "password": "Mot de passe..",
+    "connected": "Vous êtes désormais inscrit et connecté"
+  },
+
+  "logs": {
+    "title": "Logs",
+    "no-log": "Aucun logs"
+  },
+
+  "results": {
+    "title": "Résultats"
+  },
+
+  "about": {
+    "title": "À propos"
+  }
+}

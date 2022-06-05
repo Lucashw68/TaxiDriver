@@ -1,0 +1,79 @@
+{
+  "app": {
+    "name": "TaxiDriver",
+    "description": "Nuxt Шаблон для быстрого начала веб-проекта"
+  },
+
+  "views": {
+    "home": "Дом",
+    "login": "связь",
+    "register": "регистрация"
+  },
+
+  "auth": {
+    "login": "связь",
+    "register": "регистрация",
+    "profile": "профиль",
+    "logout": "Выйти"
+  },
+
+  "toolbar": {
+    "menu": "меню"
+  },
+
+  "errors": {
+    "global": "Oops.. something went wrong"
+  },
+
+  "dialog": {
+    "close": "закрывать",
+    "cancel": "отменить",
+    "send": "отправлять",
+    "refresh": "регенерация"
+  },
+
+  "forms": {
+    "search": "поиск.."
+  },
+
+  "contents": {
+    "title": "документация",
+    "read": "узнать больше"
+  },
+
+  "index": {
+    "loading": "загрузка...",
+    "completed": "полный."
+  },
+
+  "home": {
+    "title": "Дом"
+  },
+
+  "login": {
+    "title": "связь",
+    "email": "письм..",
+    "password": "пароль..",
+    "google": "гугл связь",
+    "no-account": "Нет аккаунта ? Создай !",
+    "no-account-short": "Нет аккаунта ?",
+    "connected": "теперь вы подключены"
+  },
+
+  "register": {
+    "title": "регистрация",
+    "email": "письм..",
+    "username": "прозвище..",
+    "password": "пароль..",
+    "connected": "теперь вы зарегистрированы и подключены"
+  },
+
+  "logs": {
+    "title": "журналы",
+    "no-log": "нет журналов"
+  },
+
+  "about": {
+    "title": "около"
+  }
+}

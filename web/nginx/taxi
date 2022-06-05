@@ -1,0 +1,58 @@
+map $sent_http_content_type $expires {
+    "text/html"                 1h; # set this to your needs
+    "text/html; charset=utf-8"  1h; # set this to your needs
+    default                     7d; # set this to your needs
+}
+
+server {
+    server_name     taxi.nuage.best;
+
+    gzip            on;
+    gzip_types      text/plain application/xml text/css application/javascript;
+    gzip_min_length 1000;
+
+    root /var/www/taxi/dist;
+
+    error_page 404 /404.html;
+
+    location / {
+        try_files $uri $uri/ @proxy;
+    }
+
+    location @proxy {
+        expires $expires;
+        add_header Content-Security-Policy "default-src 'self' 'unsafe-inline';";
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-Cache-Status $upstream_cache_status;
+
+        proxy_redirect                      off;
+        proxy_intercept_errors              on;
+        proxy_set_header Host               $host;
+        proxy_set_header X-Real-IP          $remote_addr;
+        proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto  $scheme;
+        proxy_ignore_headers        Cache-Control;
+        proxy_http_version          1.1;
+        proxy_read_timeout          1m;
+        proxy_connect_timeout       1m;
+    }
+
+    listen 443 ssl http2; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/taxi.nuage.best/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/taxi.nuage.best/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    ssl_protocols TLSv1.3;
+
+}
+
+server {
+    if ($host = taxi.nuage.best) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen          80;
+    server_name     taxi.nuage.best;
+    return 404; # managed by Certbot
+}

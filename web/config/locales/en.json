@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "TaxiDriver",
+    "description": "Nuxt template to begin a web project quickly"
+  },
+
+  "views": {
+    "home": "Home",
+    "login": "Login",
+    "register": "Register"
+  },
+
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+
+  "toolbar": {
+    "menu": "Menu"
+  },
+
+  "errors": {
+    "global": "Oops.. something went wrong"
+  },
+
+  "dialog": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "send": "Send",
+    "refresh": "Refresh"
+  },
+
+  "forms": {
+    "search": "Search.."
+  },
+
+  "contents": {
+    "title": "Documentation",
+    "read": "Read more"
+  },
+
+  "index": {
+    "loading": "Loading...",
+    "completed": "Complete."
+  },
+
+  "home": {
+    "title": "Home"
+  },
+
+  "login": {
+    "title": "Login",
+    "email": "Email address..",
+    "password": "Password..",
+    "google": "Login with Google",
+    "no-account": "No account ? Create one !",
+    "no-account-short": "No account ?",
+    "connected": "You're now logged in"
+  },
+
+  "register": {
+    "title": "Register",
+    "email": "Email address..",
+    "username": "Username..",
+    "password": "Password..",
+    "connected": "You're now registered and connected"
+  },
+
+  "logs": {
+    "title": "Logs",
+    "no-log": "No logs"
+  },
+
+  "results": {
+    "title": "Results"
+  },
+
+  "about": {
+    "title": "About"
+  }
+
+}

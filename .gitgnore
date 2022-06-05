@@ -1,0 +1,4 @@
+.env
+./nlp/output
+./data/train.spacy
+./data/valid.spacy

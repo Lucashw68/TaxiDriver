@@ -1,0 +1,14 @@
+{
+  "home": {
+    "en": "/home",
+    "fr": "/accueil"
+  },
+  "play": {
+    "en": "/play",
+    "fr": "/play"
+  },
+  "results": {
+    "en": "/results",
+    "fr": "/resultats"
+  }
+}
