@@ -14,7 +14,9 @@ export const state = () => ({
 
   refreshTime: 500,
   status: 'waiting',
+
   done: false,
+  finalReward: 0,
 
   results: [],
 })
@@ -33,7 +35,9 @@ export const mutations = {
 
   setRefreshTime: set('refreshTime'),
   setStatus: set('status'),
+
   setDone: set('done'),
+  setFinalReward: set('finalReward'),
 
   setResults: set('results'),
 }

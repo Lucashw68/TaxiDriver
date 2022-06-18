@@ -92,6 +92,8 @@ export default {
       'status',
       'refreshTime',
       'seed',
+      'done',
+      'finalReward',
     ]),
     dark() {
       return this.$vuetify.theme.dark
@@ -107,7 +109,15 @@ export default {
       'setState',
       'setReward',
       'setStatus',
+      'setDone',
+      'setFinalReward',
     ]),
+    addResult() {
+      this.$root.socket.emit('result', {
+        steps: this.step,
+        reward: this.finalReward,
+      })
+    },
     updateMode(mode) {
       this.setMode(mode)
       this.$root.socket.emit('mode', mode)
@@ -140,11 +150,23 @@ export default {
       this.setStep(0)
       this.setState(0)
       this.setReward(0)
+      this.setFinalReward(0)
+
       this.setStatus('waiting')
       this.setLastAction('None')
     },
     playing() {
       return this.status === 'running' && this.status !== 'waiting'
+    },
+  },
+
+  watch: {
+    done(val) {
+      console.log('=== Done changed')
+      if (val) {
+        this.requestStop()
+        this.addResult()
+      }
     },
   },
 }

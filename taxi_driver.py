@@ -24,6 +24,7 @@ def local_mode():
 
 def server_mode():
     state = gym.init_simulation(None)
+    gym.set_max_steps()
     eventlet.wsgi.server(eventlet.listen(('', 8000)), app, log_output=False)
 
 ################################################################################
@@ -89,6 +90,11 @@ def algorithm(sid, data):
 def seed(sid):
     print("==== Seed requested from", sid, "====")
     sio.emit('seed', gym.get_seed())
+
+@sio.event
+def result(sid, data):
+    print("==== Add result", data, "from", sid, "====")
+    gym.write_result(data['steps'], data['reward'])
 
 @sio.event
 def results(sid):

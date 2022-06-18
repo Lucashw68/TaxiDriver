@@ -42,11 +42,7 @@
                 md="6"
                 lg="6"
               >
-                <v-card
-                  tile
-                  color="grey"
-                  class="box"
-                >
+                <v-card tile color="grey" class="box">
                   <v-container>
                     <v-row justify="center">
                       <span
@@ -134,7 +130,8 @@ export default {
       'setState',
       'setDone',
       'setSeed',
-      'setResults'
+      'setResults',
+      'setFinalReward',
     ]),
     storeModes(modes) {
       this.setMode(modes[0])
@@ -146,6 +143,7 @@ export default {
     },
     storeStep(step) {
       this.setState(step.state)
+      this.setFinalReward(this.reward + step.reward)
       this.setReward(step.reward)
       this.setDone(step.done)
     },
@@ -175,7 +173,9 @@ export default {
   animation: blink 1.5s linear 0s infinite alternate;
 }
 .box {
-  box-shadow: rgba(128, 128, 128, 0.4) 0px 5px, rgba(128, 128, 128, 0.3) 0px 10px, rgba(128, 128, 128, 0.2) 0px 15px, rgba(128, 128, 128, 0.1) 0px 20px, rgba(128, 128, 128, 0.05) 0px 25px !important;
+  box-shadow: rgba(128, 128, 128, 0.4) 0px 5px,
+    rgba(128, 128, 128, 0.3) 0px 10px, rgba(128, 128, 128, 0.2) 0px 15px,
+    rgba(128, 128, 128, 0.1) 0px 20px, rgba(128, 128, 128, 0.05) 0px 25px !important;
 }
 @keyframes blink {
   from {

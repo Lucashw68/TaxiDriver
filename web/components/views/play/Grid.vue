@@ -46,6 +46,7 @@ export default {
     colors: [
       { ansi: '\u001B[35m', color: 'orchid', background: 'purple' },
       { ansi: '\u001B[34;1m', color: 'dodgerblue', background: 'blue' },
+      { ansi: '\u001B[42m', color: 'springgreen', background: 'green' },
       { ansi: '\u001B[43m', color: 'inherit', background: '#fbae3c' },
     ],
   }),
@@ -65,6 +66,7 @@ export default {
     this.setStep(0)
     this.setState(0)
     this.setReward(0)
+    this.setFinalReward(0)
   },
 
   methods: {
@@ -73,6 +75,7 @@ export default {
       'setState',
       'setReward',
       'setStep',
+      'setFinalReward',
     ]),
 
     formatMap(map) {

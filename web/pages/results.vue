@@ -100,7 +100,7 @@ export default {
   data: () => ({
     seed: null,
     algorithm: 'all',
-    displayResults: []
+    displayResults: [],
   }),
 
   computed: {

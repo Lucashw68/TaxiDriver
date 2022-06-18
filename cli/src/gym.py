@@ -19,6 +19,7 @@ mode = None
 algorithm = None
 instanceAlgorithm = None
 customSeed = None
+maxEpisodes = 1000
 
 modes = ["time", "tune"]
 algorithms = ["random", "pathfinding", "qlearning", "montecarlo", "genetic"]
@@ -33,6 +34,9 @@ def set_mode(mode):
 def set_algorithm(algorithm):
     globals()['algorithm'] = algorithm
     globals()['instanceAlgorithm'] = instantiateAlgorithm(algorithm)
+
+def set_max_steps():
+    env._max_episode_steps = maxEpisodes
 
 ################################################################################
 # ALGORITHMS
@@ -99,6 +103,7 @@ def step():
 def reset(seed):
     globals()['customSeed'] = seed
     env.reset(seed=customSeed)
+    set_max_steps()
 
 def randomSeed(min, max):
     return random.randint(min, max)
