@@ -34,6 +34,7 @@ There are 6 discrete deterministic actions:
 
 This solution is composed by a Python program that runs the environment and a web application that allow visualization and controls over the environment.
 The 2 communicate via Websockets.
+
 ---
 ### The Python program can be launched in 2 differents modes:
   - Local: python3 ./taxy_driver.py local [Mode] [Algorithm]
